@@ -1,5 +1,6 @@
 # NCSU-CSC-Course-Archive
  A monorepo for all the computer science courses I am taking during undergrad at NCSU.
+ - [Copy of Transcript]()
 ## Table of Contents
 | Course Number   | Coure Title |
 | :-------------: | -----------------------------------------------------------------------------------|
