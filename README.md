@@ -18,3 +18,12 @@
 | `CSC 499` | [Independent Research in Computer Science](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-499/CSC-499.md) |
 | `CSC 522` | [Automated Learning and Data Analysis](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-522/CSC-522.md) |
 
+## Course Branches
+
+| Theory | Software Engineering | Mathematics | Low-Level Systems | ML/AI/Robitics |
+| :----: | :------------------: | :---------: | :---------------: | :------------: | 
+| `CSC 226` | `CSC 116` | `MA 141` | `CSC 230` | `CSC 411` |
+| `CSC 316` | `CSC 216/217` | `MA 241` | `CSC 236` | `CSC 495` |
+| `CSC 333` | `CSC 326` | `MA 242` | `CSC 246` | `CSC 499` |
+| `CSC 416` |  `CSC 379` | `MA 305` | `CSC 406` | `CSC 522` |
+| `CSC 417` |  `CSC 499` | `ST 370` | | |
