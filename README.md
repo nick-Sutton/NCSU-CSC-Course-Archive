@@ -18,6 +18,18 @@
 | `CSC 499` | [Independent Research in Computer Science](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-499/CSC-499.md) |
 | `CSC 522` | [Automated Learning and Data Analysis](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-522/CSC-522.md) |
 
+### Other Courses
+| Course Number   | Coure Title |
+| :-------------: | -----------------------------------------------------------------------------------| 
+| `MA 141` | [Calculus I]()  |
+| `MA 241` | [Calculus II]() |
+| `MA 242` | [Calculus III]() |
+| `MA 305` | [Introductory Linear Algebra and Matrices]()|
+| `ST 370` | [Probability and Statistics for Engineers]()|
+| `PY 205/206` | [Physics for Engineers and Scientists I]()|
+| `PY 208/209` | [Physics for Engineers and Scientists II]()|
+
+
 ## Course Branches
 
 | Theory | Software Engineering | Mathematics | Low-Level Systems | ML/AI/Robitics |
