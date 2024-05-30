@@ -2,6 +2,7 @@
  A monorepo for all the computer science courses I am taking during undergrad at NCSU.
  - [Copy of Transcript]()
 ## Table of Contents
+  
 | Course Number   | Coure Title |
 | :-------------: | -----------------------------------------------------------------------------------|
 | `CSC 116` | [Introduction to Computing - Java](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-116/CSC-116.md) |
@@ -37,7 +38,7 @@
 
 ## Course Branches
 
-| Theory | Software Engineering | Mathematics | Low-Level Systems | ML/AI/Robitics |
+| Theory📚 | Software Engineering🖥️ | Mathematics🧮 | Low-Level Systems💾 | ML/AI/Robitics🤖 |
 | :----: | :------------------: | :---------: | :---------------: | :------------: |
 | `CSC 226` | `CSC 116` | `MA 141` | `CSC 230` | `CSC 411` |
 | `CSC 316` | `CSC 216/217` | `MA 241` | `CSC 236` | `CSC 495` |
