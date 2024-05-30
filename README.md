@@ -22,13 +22,13 @@
 ### Other Courses
 | Course Number   | Coure Title |
 | :-------------: | -----------------------------------------------------------------------------------| 
-| `MA 141` | [Calculus I]()  |
-| `MA 241` | [Calculus II]() |
-| `MA 242` | [Calculus III]() |
-| `MA 305` | [Introductory Linear Algebra and Matrices]()|
-| `ST 370` | [Probability and Statistics for Engineers]()|
-| `PY 205/206` | [Physics for Engineers and Scientists I]()|
-| `PY 208/209` | [Physics for Engineers and Scientists II]()|
+| `MA 141` | [Calculus I](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/Other-Courses/MA-141.md)  |
+| `MA 241` | [Calculus II](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/Other-Courses/MA-241.md) |
+| `MA 242` | [Calculus III](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/Other-Courses/MA-242.md) |
+| `MA 305` | [Introductory Linear Algebra and Matrices](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/Other-Courses/MA-305.md)|
+| `ST 370` | [Probability and Statistics for Engineers](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/Other-Courses/ST-370.md)|
+| `PY 205/206` | [Physics for Engineers and Scientists I](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/Other-Courses/PY-205.md)|
+| `PY 208/209` | [Physics for Engineers and Scientists II](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/Other-Courses/PY-208.md)|
 
 
 ## Course Branches
