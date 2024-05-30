@@ -4,7 +4,7 @@
 ## Table of Contents
 | Course Number   | Coure Title |
 | :-------------: | -----------------------------------------------------------------------------------|
-| `CSC 116` | [Introduction to Computing - Java](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-116/CSC-116.md) |
+| <a name="116"> `CSC 116` </a> | [Introduction to Computing - Java](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-116/CSC-116.md) |
 | `CSC 216/217` | [Software Development Fundamentals and Software Development Fundamentals Lab](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-216-and-217/CSC-216-and-217.md) |
 | `CSC 226` | [Discrete Mathematics for Computer Scientists](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-226/CSC-226.md) |
 | `CSC 230` | [C and Software Tools](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-230/CSC-230.md) |
@@ -39,7 +39,7 @@
 
 | Theory | Software Engineering | Mathematics | Low-Level Systems | ML/AI/Robitics |
 | :----: | :------------------: | :---------: | :---------------: | :------------: |
-| `CSC 226` | `CSC 116` | `MA 141` | `CSC 230` | `CSC 411` |
+| [`CSC 226`](116) | `CSC 116` | `MA 141` | `CSC 230` | `CSC 411` |
 | `CSC 316` | `CSC 216/217` | `MA 241` | `CSC 236` | `CSC 495` |
 | `CSC 333` | `CSC 326` | `MA 242` | `CSC 246` | `CSC 499` |
 | `CSC 416` |  `CSC 379` | `MA 305` | `CSC 406` | `CSC 522`
