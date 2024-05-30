@@ -4,7 +4,7 @@
 ## Table of Contents
 | Course Number   | Coure Title |
 | :-------------: | -----------------------------------------------------------------------------------|
-| <a name="116"> `CSC 116` </a> | [Introduction to Computing - Java](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-116/CSC-116.md) |
+| <a name="#116"> `CSC 116` </a> | [Introduction to Computing - Java](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-116/CSC-116.md) |
 | `CSC 216/217` | [Software Development Fundamentals and Software Development Fundamentals Lab](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-216-and-217/CSC-216-and-217.md) |
 | `CSC 226` | [Discrete Mathematics for Computer Scientists](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-226/CSC-226.md) |
 | `CSC 230` | [C and Software Tools](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-230/CSC-230.md) |
