@@ -17,7 +17,7 @@
 | `CSC 379` | [Ethics in Computing](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-379/CSC-379.md) |
 | `CSC 406` | [Architecture Of Parallel Computers ](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-406/CSC-406.md) |
 | `CSC 411` | [Introduction to Artificial Intelligence](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-411/CSC-411.md) |
-| `CSC 416` | [Introduction to Combinatorics](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-416/CSC-417.md) |
+| `CSC 416` | [Introduction to Combinatorics](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-416/CSC-416.md) |
 | `CSC 417` | [Theory of Programming Languages](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-417/CSC-417.md) |
 | `CSC 492` | [Senior Design Project](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-492/CSC-492.md) |
 | `CSC 499` | [Independent Research in Computer Science](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/blob/main/Courses/CSC-499/CSC-499.md) |
