@@ -6,17 +6,17 @@ In this Assignment you will learn a method for manipulating polynomials: computi
 
 Your program will begin by printing the message **"Type in the polynomials in increasing powers:"**. It will then read a sequence of floating-point numbers, one per line, ending with a blank line. These numbers define a polynomial
 
-\[a_0 x^0 + a_1 x^1 + \ldots + a_{n-1} x^{n-1} = y\]
+$a_0 x^0 + a_1 x^1 + \ldots + a_{n-1} x^{n-1} = y$
 
-where \(a_0, a_1, \ldots, a_{n-1}\) are the \(n\) input numbers provided by the user. The polynomial's coefficient input is stopped by the user entering a blank line.
+where $a_0, a_1, \ldots, a_{n-1}$ are the \(n\) input numbers provided by the user. The polynomial's coefficient input is stopped by the user entering a blank line.
 
-If the user enters a non-double value for a polynomial's coefficient, the program should print **"Invalid input, please try again."**, and wait for additional coefficient input or a blank line.
+If the user enters a non-double value for a polynomial's coefficient, the program should print `Invalid input, please try again.`, and wait for additional coefficient input or a blank line.
 
 After the blank line, the program will print the polynomial in the following format:
 
-\[a_{n-1} x^{n-1} + \ldots + a_1 x^1 + a_0 x^0\]
+$a_{n-1} x^{n-1} + \ldots + a_1 x^1 + a_0 x^0$
 
-where \(a_{n-1}, \ldots, a_0\) and \(n-1\) are actual numbers and the +'s are replaced by –'s when the corresponding coefficients are negative. In other words, if you enter -3 and 2 for coefficients, your program should print \(2 x^1 - 3 x^0\) instead of \(2 x^1 + (–3) x^0\). Terms with coefficients of 0 should be omitted. If the coefficient associated with the highest power is negative, then the coefficient should be printed as follows: \(-4 x^4\).
+where $a_{n-1}, \ldots, a_0$ and $n-1$ are actual numbers and the +'s are replaced by –'s when the corresponding coefficients are negative. In other words, if you enter -3 and 2 for coefficients, your program should print $2 x^1 - 3 x^0$ instead of $2 x^1 + (–3) x^0$. Terms with coefficients of 0 should be omitted. If the coefficient associated with the highest power is negative, then the coefficient should be printed as follows: $-4 x^4$.
 
 The program will then make a sequence of input requests, each having three parts. Each request looks like the following where the user response is in **red italics**:
 
@@ -33,7 +33,7 @@ After each three-part request, the program will print a table. Each row of the t
 
 - `x`: the current value of `x`
 - `p(x)`: the value of the polynomial at `x`
-- `diff(index)`: `p(x) – p(x_prev)`, where `x_prev` is the previous value of `x` in the table.
+- `diff(index)`: $`p(x) – p(x_prev)`$, where $`x_prev`$ is the previous value of `x` in the table.
 
 The number of rows in the table is determined by the value of `intervals` as supplied by the user. The values of `x` for the rows are spaced evenly, starting with `lower` and ending with `upper`.
 
