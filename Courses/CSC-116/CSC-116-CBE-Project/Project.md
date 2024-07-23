@@ -18,7 +18,7 @@ $a_{n-1} x^{n-1} + \ldots + a_1 x^1 + a_0 x^0$
 
 where $a_{n-1}, \ldots, a_0$ and $n-1$ are actual numbers and the +'s are replaced by –'s when the corresponding coefficients are negative. In other words, if you enter -3 and 2 for coefficients, your program should print $2 x^1 - 3 x^0$ instead of $2 x^1 + (–3) x^0$. Terms with coefficients of 0 should be omitted. If the coefficient associated with the highest power is negative, then the coefficient should be printed as follows: $-4 x^4$.
 
-The program will then make a sequence of input requests, each having three parts. Each request looks like the following where the user response is in **red italics**:
+The program will then make a sequence of input requests, each having three parts. Each request looks like the following where the user response is in `Bold`:
 
 **Type in the range:**
 - **Lower Bound (double):** `start`
