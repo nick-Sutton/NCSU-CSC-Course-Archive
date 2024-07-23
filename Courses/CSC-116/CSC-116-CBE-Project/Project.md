@@ -10,7 +10,7 @@ $a_0 x^0 + a_1 x^1 + \ldots + a_{n-1} x^{n-1} = y$
 
 where $a_0, a_1, \ldots, a_{n-1}$ are the \(n\) input numbers provided by the user. The polynomial's coefficient input is stopped by the user entering a blank line.
 
-If the user enters a non-double value for a polynomial's coefficient, the program should print `Invalid input, please try again.`, and wait for additional coefficient input or a blank line.
+If the user enters a non-double value for a polynomial's coefficient, the program should print return an error, and wait for additional coefficient input or a blank line.
 
 After the blank line, the program will print the polynomial in the following format:
 
