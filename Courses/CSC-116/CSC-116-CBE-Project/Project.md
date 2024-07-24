@@ -1,3 +1,5 @@
+# [Files](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/tree/main/Courses/CSC-116/CSC-116-CBE-Project)
+
 # Polynomial Assignment
 
 In this Assignment you will learn a method for manipulating polynomials: computing values at various points, computing differences over an interval, and finding roots.
