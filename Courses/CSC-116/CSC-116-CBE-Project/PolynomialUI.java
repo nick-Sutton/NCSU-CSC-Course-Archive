@@ -47,7 +47,7 @@ public class PolynomialUI {
 
         setPolynomial();
 
-        //printPolynomial();
+        printPolynomial();
 
         // Loop so that user can redefine table
         while (redefTable.equalsIgnoreCase("y")) {
@@ -104,7 +104,7 @@ public class PolynomialUI {
      * Prints a visual representation of the polynomial.
      */
     public void printPolynomial() {
-        polynomial.toString();
+        System.out.println(polynomial.toString());
     }
 
     /**

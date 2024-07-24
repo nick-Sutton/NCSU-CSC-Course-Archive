@@ -53,7 +53,31 @@ public class Polynomial {
      */
     public String toString() {
 
-        return Double.toString(polyArray.length - 1) + " x^" + Double.toString(3);
+        String polyEquation = "";
+        boolean onFirstTerm = true;
+
+        for (int i = coefficientCounter - 1; i >= 0; i--) {
+            double coefficeient = polyArray[i];
+
+            if (coefficeient == 0) {
+                continue;
+            }
+
+            if (onFirstTerm) {
+                onFirstTerm = false;
+            } else {
+                if (coefficeient > 0) {
+                    polyEquation += " + ";
+                } else {
+                    polyEquation += " - ";
+
+                    coefficeient = -coefficeient;
+                }
+            }
+            
+            polyEquation += coefficeient + " x^" + i;
+        }
+        return polyEquation;
     }
 
     /** 
