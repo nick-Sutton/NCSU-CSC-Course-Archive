@@ -10,7 +10,9 @@
 */
 
 public class Polynomial {
+
     private double[] polyArray;
+
     private int coefficientCounter;
 
     /**
@@ -46,7 +48,7 @@ public class Polynomial {
 
     /**
      * Converts the coefficent array into a string representation.
-     * (4.0 x^3 - 0.2 x^1 + 2.2 x^0)
+     * (a_(n - 1) x^(n - 1)) + ... + a_1 x^1 + a0 x^0
      * When coefficents are negative the sign is replaces with (-)
      * When coefficents are positive the sign is replaced with (+)
      * @return String representatioin of the coefficent array.
@@ -56,26 +58,32 @@ public class Polynomial {
         String polyEquation = "";
         boolean onFirstTerm = true;
 
+        // Locates the value of a_(n - 1) in the array
+        // a = coefficient and n = i
         for (int i = coefficientCounter - 1; i >= 0; i--) {
-            double coefficeient = polyArray[i];
+            double coefficient = polyArray[i];
 
-            if (coefficeient == 0) {
+            // If the coefficient is zero we skip it. 
+            // Note 1e-9(0.000000001) is being used instead of zero(0) to account for floating point errors.
+            if (Math.abs(coefficient) < 1e-9) {
                 continue;
             }
 
+            // Allows the first term in the equation to keep its sign(-/+)
             if (onFirstTerm) {
                 onFirstTerm = false;
-            } else {
-                if (coefficeient > 0) {
+            } else { // For all other values determine of appropriate sign(-/+) based on value
+                if (coefficient > 0) {
                     polyEquation += " + ";
                 } else {
                     polyEquation += " - ";
 
-                    coefficeient = -coefficeient;
+                    coefficient = -coefficient;
                 }
             }
-            
-            polyEquation += coefficeient + " x^" + i;
+
+            // Concatenates coefficient values with the proper x^i to create the polynomial equation
+            polyEquation += coefficient + " x^" + i;
         }
         return polyEquation;
     }
