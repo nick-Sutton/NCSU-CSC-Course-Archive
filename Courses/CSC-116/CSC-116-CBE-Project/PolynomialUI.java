@@ -13,6 +13,9 @@ public class PolynomialUI {
     private Polynomial polynomial;
     private Scanner scanner;
 
+    private String userInput;
+    private Double coefficeientInput;
+
     /**Lower Bound of Table */
     private double lowerBound;
 
@@ -44,18 +47,21 @@ public class PolynomialUI {
 
         setPolynomial();
 
-        printPolynomial();
+        //printPolynomial();
 
+        // Loop so that user can redefine table
         while (redefTable.equalsIgnoreCase("y")) {
 
             setRange();
 
             printTable();
 
+            // Loop for input validation
             while (true) {
                 System.out.println("Do you want to redefine your table? (Y/N)");
                 redefTable = scanner.nextLine();
           
+                // Checks if user has entered y or n
                 if (redefTable.equalsIgnoreCase("y") || redefTable.equalsIgnoreCase("n")) {
                     break;
                 } else {
@@ -75,17 +81,22 @@ public class PolynomialUI {
         System.out.println("Type in the polynomials in increasing powers: \n");
 
         while (true) {
-            String userInput = scanner.nextLine();
 
+            userInput = scanner.nextLine();
+
+            // End user imput if user enters blank space
             if (userInput.isBlank()) {
                 break;
             }
-        }
 
-        try {
-            
-        } catch (Exception e) {
-            System.out.println("Invalid input, please try again.");
+            // Validate that userInput is a double value.
+            try {
+                coefficeientInput = Double.parseDouble(userInput);
+                polynomial.addCoefficient(coefficeientInput); // Adds The coefficeient input to the coefficent array(polyArray)
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input, please try again.");
+            }
+
         }
     }
 
@@ -173,6 +184,7 @@ public class PolynomialUI {
         //Start value
         //end value
         //intervals
+        //int findRoot = Polynomial.findRoot(lowerBound, upperBound);
         System.out.println("\n"); // Two empty spaces above table for formatting.
         System.out.printf("%-9s %-9s %-9s\n", "index", "p(index)", "diff(index)");
         System.out.println("\n"); // Two empty spaces below table for formatting.
@@ -188,4 +200,3 @@ public class PolynomialUI {
         
     }
 }
-

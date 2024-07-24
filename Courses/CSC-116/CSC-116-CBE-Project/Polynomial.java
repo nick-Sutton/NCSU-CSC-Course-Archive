@@ -20,7 +20,7 @@ public class Polynomial {
      */
     public Polynomial() {
         polyArray = new double[10];
-        coefficientCounter = 0; // Begins counting how much of the poly array is filled
+        coefficientCounter = 0;
     }
 
     /**
@@ -78,10 +78,35 @@ public class Polynomial {
      *         For lower bounds return -1,
      *         For upper bounds return 1,
      *         For both return 2,
-     *         For roots between bounds of twp different signs return 0,
+     *         For roots between bounds of two different signs return 0,
      *         For roots between bounds or with even sign changes return -2.
     */
     public int findRoot(double lower, double upper) {
-        return 1;
+
+        double lowerValue = getValue(lower);// Get the value of the polynomial at the point lower
+        double upperValue = getValue(upper);// Get the value of the polynomial at the point upper
+
+        // Check if lowerValue is zero. Note 1e-9(0.000000001) is being used instead of zero(0) to account for floating point errors.
+        if (Math.abs(lowerValue) < 1e-9 ) {
+            return -1;
+        }
+
+        // Check if upperValue is zero. Note 1e-9(0.000000001) is being used instead of zero(0) to account for floating point errors.
+        if (Math.abs(upperValue) < 1e-9) {
+            return 1;
+        }
+
+        // Check if both values are zero. Note 1e-9(0.000000001) is being used instead of zero(0) to account for floating point errors.
+        if (Math.abs(lowerValue) < 1e-9 && Math.abs(upperValue) < 1e-9) {
+            return 2;
+        }
+
+        // Checks if a sign change occures between the two values. Zero(0) can be used since we only care about the signs of the values. 
+        if ((lowerValue < 0 && upperValue > 0) || (lowerValue > 0 && upperValue < 0)) {
+            return 0;
+        }
+
+        //Neither are roots.
+        return -2;
     }
 }
