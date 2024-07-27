@@ -23,7 +23,7 @@ public class PolynomialUI {
     private double upperBound;
 
     /**Interval; of Table */
-    private int intervals;
+    private int intervalInput;
 
     /**
      * A constructor that initializes the Polynomial object
@@ -35,7 +35,7 @@ public class PolynomialUI {
 
         lowerBound = 0;
         upperBound = 0;
-        intervals = 0;
+        intervalInput = 0;
 
     }
 
@@ -117,7 +117,7 @@ public class PolynomialUI {
         // Reset instance variables 
         lowerBound = 0;
         upperBound = 0;
-        intervals = 0;
+        intervalInput = 0;
         boolean isValid = false;
 
         while (!isValid) {
@@ -156,7 +156,7 @@ public class PolynomialUI {
             while (!intervalIsInt) {
                 System.out.print("Number of Intervals (int): ");
                 if (scanner.hasNextInt()) {
-                    intervals = scanner.nextInt();
+                    intervalInput = scanner.nextInt();
                     intervalIsInt = true;
                 } else {
                     System.out.println("ERROR! Invalid integer value. Try again.");
@@ -165,7 +165,7 @@ public class PolynomialUI {
             } // for intervalIsInt
 
             //Checks the values against eachother as per the document specs
-            if (lowerBound < upperBound && intervals > 0) {
+            if (lowerBound < upperBound && intervalInput > 0) {
                 isValid = true;
             } else {
                 System.out.println("ERROR! Please re-enter your inputs. Lower Bound must be less than Upper Bound and Intervals must be greater than 0.");
@@ -181,12 +181,39 @@ public class PolynomialUI {
      * two indexes a line in the table is created stating the location of the root.
      */
     public void printTable() {
-        //Start value
-        //end value
-        //intervals
-        //int findRoot = Polynomial.findRoot(lowerBound, upperBound);
+        double previousValue = 0;
+        double tableInterval = (upperBound - lowerBound) / Double.valueOf(intervalInput);
+
         System.out.println("\n"); // Two empty spaces above table for formatting.
-        System.out.printf("%-9s %-9s %-9s\n", "index", "p(index)", "diff(index)");
+        System.out.printf("%9s %9s %9s\n", "index", "p(index)", "diff(index)");
+
+        for (double i = 0; i <= intervalInput; i++) {
+            double index = lowerBound + (i * tableInterval);
+            double currentValue = polynomial.getValue(index);
+            double diffIndex = currentValue - previousValue;
+            
+            int findRoot = polynomial.findRoot(index - tableInterval, index);
+            
+            if (findRoot == -1) {
+                System.out.printf("Root found at %.3f\n", index = tableInterval);
+            }
+
+            if (findRoot == 1) {
+                System.out.printf("Root found at %.3f", index);
+            }
+
+            if (findRoot == 2) {
+                System.out.printf("Root found at %.3f and %.3f\n", index - tableInterval, index);
+            }
+
+            if (findRoot == 0) {
+                System.out.printf("Root found between %.3f and %.3f\n",index - tableInterval, index);
+            }
+
+            System.out.printf("%9.3f %9.3f %9.3f\n", index, currentValue, diffIndex);
+            previousValue = currentValue;
+        }
+
         System.out.println("\n"); // Two empty spaces below table for formatting.
     }
 
