@@ -181,7 +181,6 @@ public class PolynomialUI {
      * two indexes a line in the table is created stating the location of the root.
      */
     public void printTable() {
-        double previousValue = 0;
         double tableInterval = (upperBound - lowerBound) / Double.valueOf(intervalInput);
 
         System.out.println("\n"); // Two empty spaces above table for formatting.
@@ -189,13 +188,16 @@ public class PolynomialUI {
 
         for (double i = 0; i <= intervalInput; i++) {
             double index = lowerBound + (i * tableInterval);
+
+            double previousValue = polynomial.getValue(index - tableInterval);
             double currentValue = polynomial.getValue(index);
+            
             double diffIndex = currentValue - previousValue;
             
             int findRoot = polynomial.findRoot(index - tableInterval, index);
             
             if (findRoot == -1) {
-                System.out.printf("Root found at %.3f\n", index = tableInterval);
+                System.out.printf("Root found at %.3f\n", index - tableInterval);
             }
 
             if (findRoot == 1) {
