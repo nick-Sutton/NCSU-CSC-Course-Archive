@@ -11,8 +11,14 @@
 
 public class Polynomial {
 
+    /**
+     * Array containing all the user entered coefficient values
+     */
     private double[] polyArray;
 
+    /**
+     * Counts the portion of the array that is filled
+     */
     private int coefficientCounter;
 
     /**
@@ -55,7 +61,9 @@ public class Polynomial {
      */
     public String toString() {
 
+        // Create an empty String to build the equation
         String polyEquation = "";
+        // Allows for first value to keep its sign
         boolean onFirstTerm = true;
 
         // Locates the value of a_(n - 1) in the array
@@ -75,11 +83,11 @@ public class Polynomial {
             } else { // For all other values determine of appropriate sign(-/+) based on value
                 if (coefficient > 0) {
                     polyEquation += " + ";
-                } else {
+                } else { // positive(+)
                     polyEquation += " - ";
 
                     coefficient = -coefficient;
-                }
+                } // negative(-)
             }
 
             // Concatenates coefficient values with the proper x^i to create the polynomial equation
@@ -95,6 +103,7 @@ public class Polynomial {
     public double getValue(double x) { //Done
         double value = 0;
 
+        //Solve the equation for each value in the coefficient array(polyArray)
         for (int i = 0; i < coefficientCounter; i++) {
             value += polyArray[i] * Math.pow(x, i);
         }

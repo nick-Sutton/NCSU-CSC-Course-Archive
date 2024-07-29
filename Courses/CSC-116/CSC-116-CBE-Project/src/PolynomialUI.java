@@ -10,11 +10,11 @@ import java.util.Scanner;
  */
 
 public class PolynomialUI {
+    /** Polynomail class */
     private Polynomial polynomial;
-    private Scanner scanner;
 
-    private String userInput;
-    private Double coefficeientInput;
+    /** Scanner for user input */
+    private Scanner scanner;
 
     /**Lower Bound of Table */
     private double lowerBound;
@@ -22,7 +22,7 @@ public class PolynomialUI {
     /**Upper Bound of Table */
     private double upperBound;
 
-    /**Interval; of Table */
+    /**Interval of Table */
     private int intervalInput;
 
     /**
@@ -40,20 +40,34 @@ public class PolynomialUI {
     }
 
     /**
+     * Program entry point.
+     * @param args (command line arguments)
+     */
+    public static void main(String[] args) {
+        PolynomialUI polynomialUI = new PolynomialUI();
+        polynomialUI.runPolynomial();
+        
+    }
+
+    /**
      * Controls the programs flow.
      */
     public void runPolynomial() {
         String redefTable = "y";
 
+        // Get user input for polynomial coefficients
         setPolynomial();
 
+        // Print mathematical representation of polynomial array
         printPolynomial();
 
         // Loop so that user can redefine table
         while (redefTable.equalsIgnoreCase("y")) {
 
+            // Get user input for range of table
             setRange();
 
+            // print the table 
             printTable();
 
             // Loop for input validation
@@ -82,7 +96,7 @@ public class PolynomialUI {
 
         while (true) {
 
-            userInput = scanner.nextLine();
+            String userInput = scanner.nextLine();
 
             // End user imput if user enters blank space
             if (userInput.isBlank()) {
@@ -91,7 +105,7 @@ public class PolynomialUI {
 
             // Validate that userInput is a double value.
             try {
-                coefficeientInput = Double.parseDouble(userInput);
+                Double coefficeientInput = Double.parseDouble(userInput);
                 polynomial.addCoefficient(coefficeientInput); // Adds The coefficeient input to the coefficent array(polyArray)
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input, please try again.");
@@ -121,6 +135,8 @@ public class PolynomialUI {
         boolean isValid = false;
 
         while (!isValid) {
+
+            // Reset bools for error checking
             boolean lowerIsDouble = false;
             boolean upperIsDouble = false;
             boolean intervalIsInt = false;
@@ -152,7 +168,7 @@ public class PolynomialUI {
                 scanner.nextLine();
             } // for upperIsDouble
 
-            //Checks if the input for lowerBound is a valid integer value
+            //Checks if the input for interval is a valid integer value
             while (!intervalIsInt) {
                 System.out.print("Number of Intervals (int): ");
                 if (scanner.hasNextInt()) {
@@ -181,51 +197,56 @@ public class PolynomialUI {
      * two indexes a line in the table is created stating the location of the root.
      */
     public void printTable() {
+        // Finds the interval to be used between each value of the table
         double tableInterval = (upperBound - lowerBound) / Double.valueOf(intervalInput);
 
         System.out.println("\n"); // Two empty spaces above table for formatting.
         System.out.printf("%9s %9s %9s\n", "index", "p(index)", "diff(index)");
 
+        // Loop through the values to populate the table
         for (double i = 0; i <= intervalInput; i++) {
             double index = lowerBound + (i * tableInterval);
 
+            // Solves the polynomial for the previous value
             double previousValue = polynomial.getValue(index - tableInterval);
+
+            // Solves the polynomial for the current value
             double currentValue = polynomial.getValue(index);
             
+            // Difference between the current value and previous value.
             double diffIndex = currentValue - previousValue;
             
+            // Gets the return value of the polynomial.findRoot methodw
             int findRoot = polynomial.findRoot(index - tableInterval, index);
             
+            // Checks the return value of polynomial.findRoot()
             if (findRoot == -1) {
                 System.out.printf("Root found at %.3f\n", index - tableInterval);
-            }
+            } // for -1
 
+            // Checks the return value of polynomial.findRoot()
             if (findRoot == 1) {
                 System.out.printf("Root found at %.3f", index);
-            }
+            } // for 1
 
+            // Checks the return value of polynomial.findRoot()
             if (findRoot == 2) {
                 System.out.printf("Root found at %.3f and %.3f\n", index - tableInterval, index);
-            }
+            } // for 2
 
+            // Checks the return value of polynomial.findRoot()
             if (findRoot == 0) {
                 System.out.printf("Root found between %.3f and %.3f\n",index - tableInterval, index);
-            }
+            } // for 0
 
+            // Prints the values for each column of the table
             System.out.printf("%9.3f %9.3f %9.3f\n", index, currentValue, diffIndex);
+
+            // changes the previous values to the current value for the next iteration of the loop.
             previousValue = currentValue;
-        }
+            
+        } // Table Loop
 
         System.out.println("\n"); // Two empty spaces below table for formatting.
-    }
-
-    /**
-     * Program entry point.
-     * @param args (command line arguments)
-     */
-    public static void main(String[] args) {
-        PolynomialUI polynomialUI = new PolynomialUI();
-        polynomialUI.runPolynomial();
-        
     }
 }
