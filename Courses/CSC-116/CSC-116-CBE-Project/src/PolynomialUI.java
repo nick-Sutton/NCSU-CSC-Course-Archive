@@ -200,6 +200,10 @@ public class PolynomialUI {
         // Finds the interval to be used between each value of the table
         double tableInterval = (upperBound - lowerBound) / Double.valueOf(intervalInput);
 
+        // A bool for tracking if the last root found was already printed.
+        // Since some of the bounds overlap between values this avoids a double print error.
+        boolean lastRootPrinted = false;
+
         System.out.println("\n"); // Two empty spaces above table for formatting.
         System.out.printf("%9s %9s %9s\n", "index", "p(index)", "diff(index)");
 
@@ -219,31 +223,32 @@ public class PolynomialUI {
             // Gets the return value of the polynomial.findRoot methodw
             int findRoot = polynomial.findRoot(index - tableInterval, index);
             
+
             // Checks the return value of polynomial.findRoot()
-            if (findRoot == -1) {
+            if (findRoot == -1 && !lastRootPrinted) {
+                System.out.printf("%9.3f %9.3f %9.3f\n", index, currentValue, diffIndex);
                 System.out.printf("Root found at %.3f\n", index - tableInterval);
-            } // for -1
 
-            // Checks the return value of polynomial.findRoot()
-            if (findRoot == 1) {
-                System.out.printf("Root found at %.3f", index);
-            } // for 1
+                lastRootPrinted = true;
+            } else if (findRoot == 1 && !lastRootPrinted) {
+                System.out.printf("%9.3f %9.3f %9.3f\n", index, currentValue, diffIndex);
+                System.out.printf("Root found at %.3f\n", index);
+                lastRootPrinted = true;
 
-            // Checks the return value of polynomial.findRoot()
-            if (findRoot == 2) {
+            } else if (findRoot == 2) {
                 System.out.printf("Root found at %.3f and %.3f\n", index - tableInterval, index);
-            } // for 2
+                System.out.printf("%9.3f %9.3f %9.3f\n", index, currentValue, diffIndex);
+                lastRootPrinted = true;
 
-            // Checks the return value of polynomial.findRoot()
-            if (findRoot == 0) {
+            } else if (findRoot == 0) {
                 System.out.printf("Root found between %.3f and %.3f\n",index - tableInterval, index);
-            } // for 0
-
-            // Prints the values for each column of the table
-            System.out.printf("%9.3f %9.3f %9.3f\n", index, currentValue, diffIndex);
-
-            // changes the previous values to the current value for the next iteration of the loop.
-            previousValue = currentValue;
+                System.out.printf("%9.3f %9.3f %9.3f\n", index, currentValue, diffIndex);
+                lastRootPrinted = true;
+                
+            } else {
+                System.out.printf("%9.3f %9.3f %9.3f\n", index, currentValue, diffIndex);
+                lastRootPrinted = false;
+            }
             
         } // Table Loop
 

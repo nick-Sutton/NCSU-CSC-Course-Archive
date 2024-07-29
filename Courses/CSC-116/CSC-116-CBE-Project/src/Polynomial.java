@@ -100,7 +100,7 @@ public class Polynomial {
      * Locates and returns the double value of the polynomial at a location (x).
      * @return double value of polygon at location x.
      */
-    public double getValue(double x) { //Done
+    public double getValue(double x) {
         double value = 0;
 
         //Solve the equation for each value in the coefficient array(polyArray)
@@ -127,22 +127,26 @@ public class Polynomial {
         double lowerValue = getValue(lower);// Get the value of the polynomial at the point lower
         double upperValue = getValue(upper);// Get the value of the polynomial at the point upper
 
-        // Check if lowerValue is zero. Note 1e-9(0.000000001) is being used instead of zero(0) to account for floating point errors.
-        if (Math.abs(lowerValue) < 1e-9 ) {
-            return -1;
-        }
+        // Create bools to check if the two bounds = 0 Note 1e-9(0.000000001) is being used instead of zero(0) to account for floating point errors.
+        boolean lowerRootCheck = Math.abs(lowerValue) < 1e-9;
+        boolean upperRootCheck = Math.abs(upperValue) < 1e-9;
 
-        // Check if upperValue is zero. Note 1e-9(0.000000001) is being used instead of zero(0) to account for floating point errors.
-        if (Math.abs(upperValue) < 1e-9) {
-            return 1;
-        }
-
-        // Check if both values are zero. Note 1e-9(0.000000001) is being used instead of zero(0) to account for floating point errors.
-        if (Math.abs(lowerValue) < 1e-9 && Math.abs(upperValue) < 1e-9) {
+        // Check if both values are zero
+        if (lowerRootCheck && upperRootCheck) {
             return 2;
         }
 
-        // Checks if a sign change occures between the two values. Zero(0) can be used since we only care about the signs of the values. 
+        // Check if lowerValue is zero
+        if (lowerRootCheck) {
+            return -1;
+        }
+
+        // Check if upperValue is zero
+        if (upperRootCheck) {
+            return 1;
+        }
+
+        // Checks if a sign change occures between the two values
         if ((lowerValue < 0 && upperValue > 0) || (lowerValue > 0 && upperValue < 0)) {
             return 0;
         }
