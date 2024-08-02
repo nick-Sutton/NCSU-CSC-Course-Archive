@@ -1,6 +1,6 @@
 # [Files](https://github.com/nick-Sutton/NCSU-CSC-Course-Archive/tree/main/Courses/CSC-116/CSC-116-Self-Study/Line-Class)
 # BJP5 Exercise 8.14: classLine
-Write a class called `Line` that represents a line segment between two `Point`s. Your `Line` objects should have the following methods:
+Write a class called `Line` that represents a line segment between two `Points`. Your `Line` objects should have the following methods:
 
 Source: [Practice-it](https://practiceit.cs.washington.edu/problem/view/bjp5/chapter8/e14%2DclassLine)
 
