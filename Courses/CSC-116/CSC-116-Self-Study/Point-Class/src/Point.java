@@ -26,8 +26,7 @@ public class Point {
     }
 
     public String toString() {
-        return "x=" + x + ",y=" + y;
-        
+        return "x=" + x + ",y=" + y;  
     }
 
     public void setX(int newX) {
@@ -36,7 +35,6 @@ public class Point {
 
     public void setY(int newY) {
         this.y = newY;
-
     }
 
     public int quadrant() {
@@ -62,15 +60,15 @@ public class Point {
         return 1;
     }
 
-    public boolean isVertical(Point other) {
-        return true;
-    }
+    // public boolean isVertical(Point other) {
+    //    return true;
+    //}
 
-    public double slope(Point other) {
-        return 1;
-    }
+   // public double slope(Point other) {
+     //   return 1;
+    //}
 
-    public boolean isCollinear(Point p1, p2) {
-        return true;
-    }
+    //public boolean isCollinear(Point p1, p2) {
+    //    return true;
+    //}
 }
