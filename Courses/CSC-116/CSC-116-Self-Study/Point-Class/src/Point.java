@@ -59,16 +59,27 @@ public class Point {
     }
 
     public int manhattanDistance(Point other) {
-        return 1;
+        return Math.abs(other.x - this.x) + Math.abs(other.y = this.y);
     }
 
-    // public boolean isVertical(Point other) {
-    //    return true;
-    //}
+    public boolean isVertical(Point other) {
+        if (other.x == this.x) {
+            return true; 
+        } else {
+            return false;
+        }
+    }
 
-   // public double slope(Point other) {
-     //   return 1;
-    //}
+    public double slope(Point other) {
+        double slope = 0;
+        try {
+            slope = Double.valueOf((other.y - this.y) / (other.x - this.x));
+        } catch (Exception e) {
+            System.err.println(e);
+        }
+
+        return slope;
+    }
 
     //public boolean isCollinear(Point p1, p2) {
     //    return true;
