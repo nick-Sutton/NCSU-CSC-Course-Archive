@@ -1,9 +1,9 @@
 /**
- * CSC 116 Self Study - Two Rectangles
+ * CSC 116 Self Study - Point Class
  * @author Nicholas Sutton
  * From - Practice-it at Udub
  * 
- * The Two Square class creates an two constants and uses them to print square.
+ *
  */
 
 public class Point {
