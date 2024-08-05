@@ -74,7 +74,7 @@ public class Point {
         double slope = 0;
         try {
             slope = Double.valueOf((other.y - this.y) / (other.x - this.x));
-        } catch (Exception e) {
+        } catch (IllegalArgumentException e) {
             System.err.println(e);
         }
 
@@ -82,6 +82,17 @@ public class Point {
     }
 
     public boolean isCollinear(Point p1, Point p2) {
-        return true;
+        if (p1.x == this.x || p2.x == this.x) {
+            return true;
+        } 
+
+        double slope1 = (p1.y = this.y) / (p1.x - this.y);
+        double slope2 = (p2.y = this.y) / (p2.x - this.x);
+
+        if (slope1 == slope2) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
