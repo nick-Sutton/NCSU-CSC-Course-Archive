@@ -124,10 +124,10 @@ Returns the slope of the line drawn between this Point and the given other Point
 Use the formula $\(\frac{y_2 - y_1}{x_2 - x_1}\)$ to determine the slope between two points $(x_1, y_1)$ and $(x_2, y_2)$. 
 Note that this formula fails for points with identical x-coordinates, so throw an IllegalArgumentException in this case.
 
-# BJP5 [Exercise 8.6: isCollinearPoint](https://practiceit.cs.washington.edu/problem/view/bjp5/chapter8/e5%2DslopePoint)
+# BJP5 [Exercise 8.6: isCollinearPoint](https://practiceit.cs.washington.edu/problem/view/bjp5/chapter8/e6%2DisCollinearPoint)
 Add the following method to the Point class:
 
-### `public boolean isCollinear(Point p1, p2)`
+### `public boolean isCollinear(Point p1, Point p2)`
 Returns whether this Point is collinear with the given two other points. Points are collinear 
 if a straight line can be drawn that connects them. Two basic examples are three points that 
 have the same x- or y-coordinate. The more general case can be determined by calculating the slope
