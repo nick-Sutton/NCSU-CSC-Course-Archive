@@ -81,7 +81,7 @@ public class Point {
         return slope;
     }
 
-    //public boolean isCollinear(Point p1, p2) {
-    //    return true;
-    //}
+    public boolean isCollinear(Point p1, Point p2) {
+        return true;
+    }
 }
