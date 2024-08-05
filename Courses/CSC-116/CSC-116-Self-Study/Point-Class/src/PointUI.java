@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 public class PointUI {
     Point point;
+    Point otherPoint;
     Scanner scanner;
 
     public PointUI() {
@@ -27,12 +28,33 @@ public class PointUI {
         point = new Point(xValue, yValue);
         System.out.println(point.toString());
 
+        System.out.println("The flipped version of this point is: ");
+        point.flip();
+        System.out.println(point.toString());
+
+        System.out.println("Please pick another point");
+        System.out.print("Enter another x value: ");
+        int otherX = Integer.parseInt(scanner.next());
+        
+        System.out.print("Enter another y value: ");
+        int otherY = Integer.parseInt(scanner.next());
+
+        otherPoint = new Point(otherX, otherY);
+
+        point = new Point(otherPoint);
+        System.out.println(point.toString());
+        System.out.println("The flipped version of this point is: ");
+        point.flip();
+        System.out.println(point.toString());
+
         int pointQuad = point.quadrant();
         if (pointQuad == 0) {
             System.out.println("This point lies on one of the axes");
         } else {
             System.out.println("This point lies in quadrant " + pointQuad);
         }
+
+
 
         System.out.println("Please choose a new point");
         System.out.print("Enter an x value: ");

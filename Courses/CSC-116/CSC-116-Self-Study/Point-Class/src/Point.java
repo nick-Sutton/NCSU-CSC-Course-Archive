@@ -52,8 +52,10 @@ public class Point {
     }
 
     public void flip() {
-        this.x = -this.y;
-        this.y = -this.x;
+        int flippedX = -this.y;
+        int flippedY = -this.x;
+        this.x = flippedX;
+        this.y = flippedY;
     }
 
     public int manhattanDistance(Point other) {
