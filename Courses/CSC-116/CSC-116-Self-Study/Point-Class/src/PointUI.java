@@ -34,16 +34,23 @@ public class PointUI {
             System.out.println("This point lies in quadrant " + pointQuad);
         }
 
-        System.out.println("Would you like to change the point: (Y/N)");
-        String changePoint = scanner.nextLine();
+        System.out.println("Please choose a new point");
+        System.out.print("Enter an x value: ");
+        int newX = Integer.parseInt(scanner.next());
+        point.setX(newX);
 
-        if (changePoint.equalsIgnoreCase("y")) {
-            System.out.print("Enter an x value: ");
-            xValue = Integer.parseInt(scanner.next());
-            
-            System.out.print("Enter an y value: ");
-            yValue = Integer.parseInt(scanner.next());
+        System.out.print("Enter an y value: ");
+        int newY = Integer.parseInt(scanner.next());
+        point.setY(newY);
+
+        System.out.println("Your new point is " + point.toString());
+        int newPointQuad = point.quadrant();
+        if (newPointQuad == 0) {
+            System.out.println("This point lies on one of the axes");
+        } else {
+            System.out.println("This point lies in quadrant " + newPointQuad);
         }
+
 
         scanner.close();
 
